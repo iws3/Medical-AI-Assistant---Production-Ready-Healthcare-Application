@@ -7,12 +7,6 @@ A production-ready AI-powered medical assistant built with LangChain and Google 
 
 ## Demo
 
-
-
-## Demo
-
-## Demo
-
 [![Demo Preview](https://github.com/user-attachments/assets/f09da8d2-626f-4efa-8d12-58ca38ba77e0)](https://vimeo.com/1123091554)
 
 *Click the preview to watch the full demonstration*
