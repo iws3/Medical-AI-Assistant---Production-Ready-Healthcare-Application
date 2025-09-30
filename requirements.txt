@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+python-dotenv
+python-multipart
+pydantic
+pydantic-settings
+langchain
+langchain-core
+langchain-google-genai
+tavily-python
+Pillow
