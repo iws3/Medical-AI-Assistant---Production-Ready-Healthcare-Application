@@ -332,7 +332,7 @@ MIT License - see LICENSE file for details
 ## Support
 
 - Open an issue for bugs or feature requests
-- Check the [full documentation](https://dev.to/yourusername/medical-ai-assistant-guide) for detailed guides
+- Check the [full documentation](https://dev.to/fonyuygita/building-a-production-ready-medical-ai-assistant-with-python-fastapi-tavili-gemini-langchain-5693) for detailed guides
 - Join discussions in the Issues tab
 
 ## Disclaimer
