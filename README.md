@@ -1,11 +1,19 @@
 # Medical AI Assistant - Production-Ready Healthcare Application
+<img width="1832" height="845" alt="Screenshot 2025-09-30 061026" src="https://github.com/user-attachments/assets/f09da8d2-626f-4efa-8d12-58ca38ba77e0" />
 
 A production-ready AI-powered medical assistant built with LangChain and Google Gemini 2.0. Demonstrates best practices for building intelligent healthcare applications with natural language processing, document analysis, and research capabilities.
 
+
+
 ## Demo
 
-{% vimeo 1123091554 %}
+[![Demo Preview](https://github.com/user-attachments/assets/f09da8d2-626f-4efa-8d12-58ca38ba77e0)](https://vimeo.com/1123091554)
 
+*Click the preview to watch the full demonstration*
+
+
+
+Click the link above to see the Medical AI Assistant in action.
 ## Features
 
 - **AI Medical Consultation** - Natural language medical Q&A with context-aware responses
