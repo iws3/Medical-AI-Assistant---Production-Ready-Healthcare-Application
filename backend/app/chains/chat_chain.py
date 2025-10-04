@@ -9,21 +9,8 @@ from app.config import load_google_llm
 
 
 def create_chat_chain(language: str = "en"):
-    """
-    Create a simple chat chain for medical Q&A
     
-    How it works:
-    1. User sends a question
-    2. Prompt adds medical context
-    3. LLM generates response
-    4. Parser converts to string
-    
-    Args:
-        language: Response language (en/fr)
-        
-    Returns:
-        Runnable chain
-    """
+
     # Load the LLM
     llm = load_google_llm()
     
@@ -66,16 +53,7 @@ IMPORTANT: You are NOT a doctor. Never provide definitive diagnoses."""
 
 
 def get_chat_response(message: str, language: str = "en"):
-    """
-    Get a chat response from the AI
-    
-    Args:
-        message: User's question
-        language: Response language
-        
-    Returns:
-        AI response string
-    """
+   
     # Create the chain
     chain = create_chat_chain(language)
     

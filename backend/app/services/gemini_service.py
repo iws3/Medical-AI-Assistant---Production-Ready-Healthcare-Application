@@ -11,27 +11,14 @@ import base64
 
 
 class GeminiService:
-    """Service class for Gemini AI operations using LangChain"""
+    
     
     def __init__(self):
-        """Initialize Gemini vision model"""
+  
         self.vision_llm = load_google_vision_llm()
     
     def extract_text_from_image(self, image_bytes: bytes):
-        """
-        Extract text from medical record image using Gemini Vision
-        
-        How it works:
-        1. Convert image bytes to base64
-        2. Create a message with image and text prompt
-        3. LLM analyzes image and extracts text
-        
-        Args:
-            image_bytes: Image file bytes
-            
-        Returns:
-            Extracted text string
-        """
+      
         try:
             # Convert image bytes to base64
             image_b64 = base64.b64encode(image_bytes).decode('utf-8')

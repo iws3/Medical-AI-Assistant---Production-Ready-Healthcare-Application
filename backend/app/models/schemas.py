@@ -14,13 +14,13 @@ class HealthCheckResponse(BaseModel):
 
 
 class ChatRequest(BaseModel):
-    """Chat/Question request model"""
+    
     message: str = Field(..., min_length=1, max_length=1000, description="User's medical question")
     language: str = Field(default="en", description="Response language (en/fr)")
 
 
 class ChatResponse(BaseModel):
-    """Chat response model"""
+   
     response: str
     language: str
     timestamp: datetime
@@ -34,7 +34,7 @@ class AnalysisRequest(BaseModel):
 
 
 class MedicalAnalysis(BaseModel):
-    """Structured medical analysis output"""
+   
     summary: str = Field(description="Brief overview of the medical record")
     key_findings: list[str] = Field(description="List of important findings")
     recommendations: list[str] = Field(description="Health recommendations")
@@ -42,7 +42,7 @@ class MedicalAnalysis(BaseModel):
 
 
 class AnalysisResponse(BaseModel):
-    """Analysis response model"""
+    
     summary: str
     key_findings: list[str]
     recommendations: list[str]

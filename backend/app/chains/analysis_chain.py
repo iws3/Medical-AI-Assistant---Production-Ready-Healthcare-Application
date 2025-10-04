@@ -10,21 +10,7 @@ from app.models.schemas import MedicalAnalysis
 
 
 def create_analysis_chain(language: str = "en"):
-    """
-    Create a chain for structured medical record analysis
-    
-    How it works:
-    1. User provides medical record text
-    2. Prompt instructs LLM to analyze in structured format
-    3. LLM generates JSON response
-    4. Parser converts JSON to Pydantic model
-    
-    Args:
-        language: Response language (en/fr)
-        
-    Returns:
-        Runnable chain that outputs MedicalAnalysis
-    """
+   
     # Load the LLM
     llm = load_google_llm()
     
@@ -32,6 +18,7 @@ def create_analysis_chain(language: str = "en"):
     parser = PydanticOutputParser(pydantic_object=MedicalAnalysis)
     
     # Get format instructions from parser
+    # help language format and write instructions we dont see to help ai give us info, in a specified format
     format_instructions = parser.get_format_instructions()
     
     # Create prompt based on language
@@ -51,6 +38,7 @@ Contexte Additionnel:
 {format_instructions}
 
 Répondez UNIQUEMENT en JSON valide."""
+
     else:
         system_message = """You are a medical AI assistant analyzing medical records.
 Provide clear, accurate, and actionable insights.
@@ -84,17 +72,7 @@ Respond ONLY with valid JSON."""
 
 
 def analyze_medical_record(text: str, context: str = "", language: str = "en"):
-    """
-    Analyze medical record text and return structured results
-    
-    Args:
-        text: Medical record text
-        context: Additional patient context
-        language: Response language
-        
-    Returns:
-        MedicalAnalysis object with structured data
-    """
+
     # Create the chain
     chain = create_analysis_chain(language)
     

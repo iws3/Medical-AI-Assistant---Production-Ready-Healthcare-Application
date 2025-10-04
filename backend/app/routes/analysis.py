@@ -18,16 +18,6 @@ router = APIRouter(prefix="/api", tags=["Analysis"])
 
 @router.post("/chat", response_model=ChatResponse)
 async def chat_with_ai(request: ChatRequest):
-    """
-    Chat with AI about medical questions
-    Uses LangChain chat chain for responses
-    
-    Args:
-        request: Chat request with message and language
-        
-    Returns:
-        AI response
-    """
     try:
         # Use LangChain chat chain
         response_text = get_chat_response(
@@ -68,9 +58,10 @@ async def analyze_medical_text(request: AnalysisRequest):
         disclaimer = (
             "⚠️ This analysis is for informational purposes only. "
             "Always consult qualified healthcare professionals for medical advice."
+            "Please make sure you go to the hospital"
         )
         
-        return AnalysisResponse(
+        return AnalysisResponse (
             summary=analysis.summary,
             key_findings=analysis.key_findings,
             recommendations=analysis.recommendations,

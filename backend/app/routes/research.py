@@ -13,16 +13,7 @@ router = APIRouter(prefix="/api", tags=["Research"])
 
 @router.post("/research", response_model=ResearchResponse)
 async def search_medical_research(request: ResearchRequest):
-    """
-    Search for medical research and information
-    Uses Tavily for search + LangChain for summary
     
-    Args:
-        request: Research request with query and parameters
-        
-    Returns:
-        Research results with AI-generated summary
-    """
     try:
         # Search using Tavily
         raw_results = tavily_service.search_medical_research(
